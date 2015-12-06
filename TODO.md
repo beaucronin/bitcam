@@ -1,0 +1,5 @@
+- Add streaming call
+- Add post-processed call (OpenCV?)
+- Implement second server for further processing
+- Add status/description call (locaction, sensor type, etc.)
+- Add free example call with day-old frame
