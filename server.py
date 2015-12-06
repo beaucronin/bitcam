@@ -18,7 +18,7 @@ payment = Payment(app, wallet)
 # Charge a fixed fee of 1000 satoshis per request to the
 # /snap endpoint
 @app.route('/snap')
-# @payment.required(1000)
+@payment.required(1000)
 def snap():
     # a file to store the rendered audio file
     file = str(uuid4()) + '.jpeg'
