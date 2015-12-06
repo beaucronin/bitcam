@@ -20,13 +20,10 @@ payment = Payment(app, wallet)
 @app.route('/snap')
 @payment.required(1000)
 def snap():
-    # a file to store the rendered audio file
     file = str(uuid4()) + '.jpeg'
 
-    # run the TTS engine
     call(['streamer', '-f', 'jpeg', '-o', '/tmp/' + file])
 
-    # send the rendered audio back to the client
     return send_from_directory(
       '/tmp',
       file,
